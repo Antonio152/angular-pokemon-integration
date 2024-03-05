@@ -1,0 +1,46 @@
+// carousel.component.scss
+
+.carousel {
+  position: relative;
+
+  .slides {
+    display: flex;
+    overflow-x: hidden;
+
+      height: 400px;
+      justify-content: center;
+
+
+    .slide {
+      flex: 0 0 auto;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
+}
